@@ -1,0 +1,31 @@
+<div class="residence-details">
+    <h2>Détails de la résidence</h2>
+  
+    <div *ngIf="res">
+        <div class="card" style="width: 18rem;margin-right: 30px;">
+            <img [src]="res.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">{{res.name}}</h3>
+              <h3 class="card-title">{{res.id}}</h3>
+              <h3 *ngIf="res.status==='Disponible'"  style="color:green" class="card-text">{{res.status}}</h3>
+              <h3 *ngIf="res.status==='Vendu'"  style="color:red" class="card-text">{{res.status}}</h3>
+              <h3 *ngIf="res.status==='En Construction'"  style="color:orange" class="card-text">{{res.status}}</h3>
+              <h3 class="card-title">{{res.address}}</h3> 
+             
+        
+            </div>
+          </div>
+        </div>
+      
+  
+    </div>
+  
+    <button (click)="nextResidence()" class="btn btn-primary">Next</button>
+   <!-- <button [routerLink]="['/add-residence']">Add Residence</button>-->
+    <!-- src/app/residences/residence-details/residence-details.component.html -->
+    <button [routerLink]="['/residences/add']" class="btn btn-primary">Add Residence</button>
+    <button [routerLink]="['/residences/add', res?.id]" class="btn btn-primary">Update Residence</button>
+    <button [routerLink]="['/apartments/add']">Créer un nouvel appartement</button>
+
+
+  

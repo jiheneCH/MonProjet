@@ -1,0 +1,17 @@
+<h1>Listes des résidences</h1>
+<div style="display: flex; flex-wrap: wrap;">
+<div *ngFor="let residence of listResidences">
+<div class="card" style="width: 16rem;margin-right: 30px;">
+    <img [src]="residence.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title">{{residence.name}}</h3>
+      <h3 *ngIf="residence.status==='Disponible'"  style="color:green" class="card-text">{{residence.status}}</h3>
+      <h3 *ngIf="residence.status==='Vendu'"  style="color:red" class="card-text">{{residence.status}}</h3>
+      <h3 *ngIf="residence.status==='En Construction'"  style="color:orange" class="card-text">{{residence.status}}</h3>
+       <h3 class="card-title">{{residence.address}}</h3>
+  </div>
+  </div>
+</div>
+</div>
+
+
