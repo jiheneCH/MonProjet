@@ -36,7 +36,8 @@ import { ApartmentByResidenceComponent } from './apartment-by-residence/apartmen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

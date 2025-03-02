@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-add-residence',
+  selector: 'app-residence-form',
   templateUrl: './add-residence.component.html',
   styleUrls: ['./add-residence.component.css']
 })
